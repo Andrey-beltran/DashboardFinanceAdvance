@@ -107,10 +107,10 @@ export const filterBillingData = (data: BillingData[], filters: FilterState): Bi
   });
 };
 
-// Function to group and aggregate income data by specified dimensions
+// Modificada para aceptar más tipos de dimensiones
 export const groupAndAggregateIncomeData = (
-  data: IncomeData[],
-  dimensions: (keyof Omit<IncomeData, 'amount'>)[]
+  data: any[],
+  dimensions: string[]
 ) => {
   const groupedData: Record<string, number> = {};
   
